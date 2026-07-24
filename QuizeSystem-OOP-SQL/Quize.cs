@@ -24,8 +24,11 @@ namespace QuizeSystem_OOP_SQL
 
         internal List<QuizeQuestion> QuizeQuestions;
 
-        internal Quize(string quizeName, QuizeType quizeType, int totalScore, int durationInMinutes)
+        internal Course Course;
+
+        internal Quize(Course course, string quizeName, QuizeType quizeType, int totalScore, int durationInMinutes)
         {
+            Course = course;
             QuizeName = quizeName;
             QuizeType = quizeType;
             TotalScore = totalScore;

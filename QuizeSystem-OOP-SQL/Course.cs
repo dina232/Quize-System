@@ -28,7 +28,7 @@ namespace QuizeSystem_OOP_SQL
 
         internal List<Student> Students;
 
-        internal Teacher Teacher;
+        internal Teacher? Teacher;
 
         internal Course(string courseName, CourseCategory courseCategory, int numberOfLessons, float courseMonthDuration)
         {
@@ -38,6 +38,12 @@ namespace QuizeSystem_OOP_SQL
             CourseCategory = courseCategory;
             NumberOfLessons = numberOfLessons;
             CourseMonthDuration = courseMonthDuration;
+
+            if (numberOfLessons < 1 || string.IsNullOrEmpty(courseName) || CourseMonthDuration < 0) throw new Exception("Invalid data");
+            Students = new List<Student>();
+            Quizes = new List<Quize>();
+
+
         }
         internal void ViewGeneralDetails() {
             Console.WriteLine($"Course Name: {CourseName}");

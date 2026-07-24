@@ -6,11 +6,19 @@ using System.Threading.Tasks;
 
 namespace QuizeSystem_OOP_SQL
 {
+    public enum TeacherTitle
+    {
+        Professor,
+        ProfessorAssistant,
+        Instructor
+    }
     internal class Teacher : Person 
     {
+        internal TeacherTitle Title;
         internal List<Course> Courses;
-        public Teacher(string name, string email, string passward) : base(name, email, passward) {
+        public Teacher(string name, string email, string passward , TeacherTitle title) : base(name, email, passward) {
             Courses = new List<Course>();
+            Title = title;
         }
 
         internal void AssignToACourse(Course course) 
@@ -27,7 +35,7 @@ namespace QuizeSystem_OOP_SQL
         {
             if (Courses is null || Courses.Count == 0) 
             {
-                Console.WriteLine("No Assigned Quizes yet!");
+                Console.WriteLine("No Assigned Courses yet!");
                 return;
             }
             for (int i = 0; i < Courses.Count; i++)
@@ -69,11 +77,15 @@ namespace QuizeSystem_OOP_SQL
         
         }
         internal void ReleaseCourse(Course course)
-        { 
-            if (course.Students is null || course.Students.Count == 0)
+        {
+            if (course.Students is null) throw new ArgumentNullException("course");
+            if(course.Students.Count == 0)
             {
-
+                course.Teacher = null;
+                Courses.Remove(course);
             }
+            if (course.Students.Count > 0) Console.WriteLine("Can not release a course that has students enrolled in it!");
+            
         
         }
 
