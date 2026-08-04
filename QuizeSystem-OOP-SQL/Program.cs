@@ -4,7 +4,15 @@
     {
         static void Main(string[] args)
         {
-            Console.WriteLine();
+            try
+            {
+                Console.Title = "Quiz System";
+                OperatingClass.OperateSystem();
+            }
+            catch(Exception e) 
+            {
+                Console.WriteLine(e.Message);
+            }
         }
     }
 }

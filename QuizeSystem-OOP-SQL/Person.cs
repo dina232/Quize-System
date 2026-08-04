@@ -6,12 +6,14 @@ using System.Threading.Tasks;
 
 namespace QuizeSystem_OOP_SQL
 {
-    internal class Person
+    public class Person
     {
         public string Name { get; set; }
         public string Email { get; set; }
         public string Passward { get; set; }
 
+        public int Id { get; }
+        private static int _idCounter = 1;
         public Person(string name, string email, string passward) 
         {
             if(name == null || name.Length < 2) throw new ArgumentException("enter a valid name");
@@ -20,6 +22,8 @@ namespace QuizeSystem_OOP_SQL
             Name = name;
             Email = email;
             Passward = passward;
+            Id = _idCounter;
+            _idCounter++;
         }
 
 

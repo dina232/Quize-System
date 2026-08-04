@@ -14,34 +14,37 @@ namespace QuizeSystem_OOP_SQL
         Business,
         Language,
         NaturalScience,
+        Math
     }
-    internal class Course
+    public class Course : IViewable
     {
-        internal static int IdCounter = 0;
-        internal int CourseID { get; private set; }
-        internal string CourseName { get; private set; }
-        internal CourseCategory CourseCategory { get; private set; }
-        internal int NumberOfLessons { get; private set; }
-        internal float CourseMonthDuration { get; private set; }
+        private static int _idCounter = 1;
+        public int CourseID { get; }
+        public string CourseName { get; private set; }
+        public CourseCategory CourseCategory { get; private set; }
+        public int NumberOfLessons { get; private set; }
+        public float CourseMonthDuration { get; private set; }
 
-        internal List<Quize> Quizes;
+        public List<Quiz> Quizes;
 
-        internal List<Student> Students;
+        public List<Student> Students;
 
-        internal Teacher? Teacher;
+        public Teacher? Teacher;
+
+        public bool IsFinished { get; private set; }
 
         internal Course(string courseName, CourseCategory courseCategory, int numberOfLessons, float courseMonthDuration)
         {
-            CourseID = IdCounter;
-            IdCounter++;
+            CourseID = _idCounter;
+            _idCounter++;
             CourseName = courseName;
             CourseCategory = courseCategory;
             NumberOfLessons = numberOfLessons;
             CourseMonthDuration = courseMonthDuration;
-
+            IsFinished = false;
             if (numberOfLessons < 1 || string.IsNullOrEmpty(courseName) || CourseMonthDuration < 0) throw new Exception("Invalid data");
             Students = new List<Student>();
-            Quizes = new List<Quize>();
+            Quizes = new List<Quiz>();
 
 
         }
@@ -51,7 +54,7 @@ namespace QuizeSystem_OOP_SQL
             Console.WriteLine($"Course Duration (Months): {CourseMonthDuration}");
 
         }
-        internal void ViewAllDetails()
+        public void ViewDetails()
         {
             Console.WriteLine($"Course ID: {CourseID}");
             ViewGeneralDetails();
@@ -72,22 +75,7 @@ namespace QuizeSystem_OOP_SQL
                 Console.WriteLine("No students enrolled in this course.");
         }
 
-        internal void AddQuize(Quize quize)
-        {
-            if (Quizes == null)
-            {
-                Quizes = new List<Quize>();
-            }
-            Quizes.Add(quize);
-        }
-
-        internal void RemoveQuize(Quize quize)
-        {
-            if (Quizes != null)
-            {
-                Quizes.Remove(quize);
-            }
-        }
+        
 
         internal void ListQuizesNames()
         {
@@ -95,7 +83,7 @@ namespace QuizeSystem_OOP_SQL
             {
                 for (int i = 0; i < Quizes.Count; i++)
                 {
-                    Console.WriteLine($"Quize {i + 1} : {Quizes[i].QuizeName}");
+                    Console.WriteLine($"Quize {i + 1} : {Quizes[i].QuizName}");
                 }
             }
             else
@@ -111,6 +99,17 @@ namespace QuizeSystem_OOP_SQL
             Students.Add(student);
         }
 
+        internal Quiz CreateQuize(string quizeName, QuizType quizType, int totalScore,int questionsNumber, int durationInMinutes, bool isEqualInScores)
+        {
+            if (string.IsNullOrEmpty(quizeName)) throw new Exception("Invalid Quiz Name!");
+            if (totalScore < 0 || totalScore > 100 || totalScore + Quizes.Sum(a => a.TotalScore) > 100)
+                throw new Exception("Invalid Score for Quiz!");
+            if(durationInMinutes <0 || durationInMinutes > 120)
+                throw new Exception("Invalid duration for A Quiz!");
 
+            Quiz quiz = new Quiz(this, quizeName, quizType, totalScore, questionsNumber, durationInMinutes, isEqualInScores);
+            this.Quizes.Add(quiz);
+            return quiz;
+        }
     }
 }

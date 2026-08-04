@@ -1,0 +1,23 @@
+{
+  "runtimeTarget": {
+    "name": ".NETCoreApp,Version=v8.0",
+    "signature": ""
+  },
+  "compilationOptions": {},
+  "targets": {
+    ".NETCoreApp,Version=v8.0": {
+      "QuizeSystem-OOP-SQL/1.0.0": {
+        "runtime": {
+          "QuizeSystem-OOP-SQL.dll": {}
+        }
+      }
+    }
+  },
+  "libraries": {
+    "QuizeSystem-OOP-SQL/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    }
+  }
+}

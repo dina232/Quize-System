@@ -3,44 +3,64 @@
   "WorkspaceRootPath": "E:\\backend course\\Projects\\Project-Quizes-System\\QuizeSystem-OOP-SQL\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{102DB723-4FE2-5257-499F-1FF4F8FB7615}|QuizeSystem-OOP-SQL.csproj|e:\\backend course\\projects\\project-quizes-system\\quizesystem-oop-sql\\iregister.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{102DB723-4FE2-5257-499F-1FF4F8FB7615}|QuizeSystem-OOP-SQL.csproj|solutionrelative:iregister.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{102DB723-4FE2-5257-499F-1FF4F8FB7615}|QuizeSystem-OOP-SQL.csproj|e:\\backend course\\projects\\project-quizes-system\\quizesystem-oop-sql\\teacher.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{102DB723-4FE2-5257-499F-1FF4F8FB7615}|QuizeSystem-OOP-SQL.csproj|solutionrelative:teacher.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{102DB723-4FE2-5257-499F-1FF4F8FB7615}|QuizeSystem-OOP-SQL.csproj|e:\\backend course\\projects\\project-quizes-system\\quizesystem-oop-sql\\quizequestion.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{102DB723-4FE2-5257-499F-1FF4F8FB7615}|QuizeSystem-OOP-SQL.csproj|solutionrelative:quizequestion.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{102DB723-4FE2-5257-499F-1FF4F8FB7615}|QuizeSystem-OOP-SQL.csproj|e:\\backend course\\projects\\project-quizes-system\\quizesystem-oop-sql\\quize.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{102DB723-4FE2-5257-499F-1FF4F8FB7615}|QuizeSystem-OOP-SQL.csproj|solutionrelative:quize.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{102DB723-4FE2-5257-499F-1FF4F8FB7615}|QuizeSystem-OOP-SQL.csproj|e:\\backend course\\projects\\project-quizes-system\\quizesystem-oop-sql\\person.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{102DB723-4FE2-5257-499F-1FF4F8FB7615}|QuizeSystem-OOP-SQL.csproj|solutionrelative:person.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{102DB723-4FE2-5257-499F-1FF4F8FB7615}|QuizeSystem-OOP-SQL.csproj|e:\\backend course\\projects\\project-quizes-system\\quizesystem-oop-sql\\data.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{102DB723-4FE2-5257-499F-1FF4F8FB7615}|QuizeSystem-OOP-SQL.csproj|solutionrelative:data.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{102DB723-4FE2-5257-499F-1FF4F8FB7615}|QuizeSystem-OOP-SQL.csproj|e:\\backend course\\projects\\project-quizes-system\\quizesystem-oop-sql\\menu.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{102DB723-4FE2-5257-499F-1FF4F8FB7615}|QuizeSystem-OOP-SQL.csproj|solutionrelative:menu.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{102DB723-4FE2-5257-499F-1FF4F8FB7615}|QuizeSystem-OOP-SQL.csproj|e:\\backend course\\projects\\project-quizes-system\\quizesystem-oop-sql\\admin.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{102DB723-4FE2-5257-499F-1FF4F8FB7615}|QuizeSystem-OOP-SQL.csproj|solutionrelative:admin.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{102DB723-4FE2-5257-499F-1FF4F8FB7615}|QuizeSystem-OOP-SQL.csproj|e:\\backend course\\projects\\project-quizes-system\\quizesystem-oop-sql\\student.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{102DB723-4FE2-5257-499F-1FF4F8FB7615}|QuizeSystem-OOP-SQL.csproj|solutionrelative:student.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{102DB723-4FE2-5257-499F-1FF4F8FB7615}|QuizeSystem-OOP-SQL.csproj|e:\\backend course\\projects\\project-quizes-system\\quizesystem-oop-sql\\privileges.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{102DB723-4FE2-5257-499F-1FF4F8FB7615}|QuizeSystem-OOP-SQL.csproj|solutionrelative:privileges.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{102DB723-4FE2-5257-499F-1FF4F8FB7615}|QuizeSystem-OOP-SQL.csproj|e:\\backend course\\projects\\project-quizes-system\\quizesystem-oop-sql\\course.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{102DB723-4FE2-5257-499F-1FF4F8FB7615}|QuizeSystem-OOP-SQL.csproj|solutionrelative:course.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
+      "AbsoluteMoniker": "D:0:0:{102DB723-4FE2-5257-499F-1FF4F8FB7615}|QuizeSystem-OOP-SQL.csproj|e:\\backend course\\projects\\project-quizes-system\\quizesystem-oop-sql\\admin.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{102DB723-4FE2-5257-499F-1FF4F8FB7615}|QuizeSystem-OOP-SQL.csproj|solutionrelative:admin.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{102DB723-4FE2-5257-499F-1FF4F8FB7615}|QuizeSystem-OOP-SQL.csproj|e:\\backend course\\projects\\project-quizes-system\\quizesystem-oop-sql\\quiz.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{102DB723-4FE2-5257-499F-1FF4F8FB7615}|QuizeSystem-OOP-SQL.csproj|solutionrelative:quiz.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{102DB723-4FE2-5257-499F-1FF4F8FB7615}|QuizeSystem-OOP-SQL.csproj|e:\\backend course\\projects\\project-quizes-system\\quizesystem-oop-sql\\person.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{102DB723-4FE2-5257-499F-1FF4F8FB7615}|QuizeSystem-OOP-SQL.csproj|solutionrelative:person.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{102DB723-4FE2-5257-499F-1FF4F8FB7615}|QuizeSystem-OOP-SQL.csproj|e:\\backend course\\projects\\project-quizes-system\\quizesystem-oop-sql\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{102DB723-4FE2-5257-499F-1FF4F8FB7615}|QuizeSystem-OOP-SQL.csproj|solutionrelative:program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{102DB723-4FE2-5257-499F-1FF4F8FB7615}|QuizeSystem-OOP-SQL.csproj|e:\\backend course\\projects\\project-quizes-system\\quizesystem-oop-sql\\systemaccesscontrol.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{102DB723-4FE2-5257-499F-1FF4F8FB7615}|QuizeSystem-OOP-SQL.csproj|solutionrelative:systemaccesscontrol.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{102DB723-4FE2-5257-499F-1FF4F8FB7615}|QuizeSystem-OOP-SQL.csproj|e:\\backend course\\projects\\project-quizes-system\\quizesystem-oop-sql\\quizquestionsmanagment.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{102DB723-4FE2-5257-499F-1FF4F8FB7615}|QuizeSystem-OOP-SQL.csproj|solutionrelative:quizquestionsmanagment.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{102DB723-4FE2-5257-499F-1FF4F8FB7615}|QuizeSystem-OOP-SQL.csproj|e:\\backend course\\projects\\project-quizes-system\\quizesystem-oop-sql\\helpers.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{102DB723-4FE2-5257-499F-1FF4F8FB7615}|QuizeSystem-OOP-SQL.csproj|solutionrelative:helpers.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{102DB723-4FE2-5257-499F-1FF4F8FB7615}|QuizeSystem-OOP-SQL.csproj|e:\\backend course\\projects\\project-quizes-system\\quizesystem-oop-sql\\iviewable.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{102DB723-4FE2-5257-499F-1FF4F8FB7615}|QuizeSystem-OOP-SQL.csproj|solutionrelative:iviewable.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{102DB723-4FE2-5257-499F-1FF4F8FB7615}|QuizeSystem-OOP-SQL.csproj|e:\\backend course\\projects\\project-quizes-system\\quizesystem-oop-sql\\quizmanagment.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{102DB723-4FE2-5257-499F-1FF4F8FB7615}|QuizeSystem-OOP-SQL.csproj|solutionrelative:quizmanagment.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{102DB723-4FE2-5257-499F-1FF4F8FB7615}|QuizeSystem-OOP-SQL.csproj|e:\\backend course\\projects\\project-quizes-system\\quizesystem-oop-sql\\quizquestion.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{102DB723-4FE2-5257-499F-1FF4F8FB7615}|QuizeSystem-OOP-SQL.csproj|solutionrelative:quizquestion.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -50,32 +70,33 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 7,
+          "SelectedChildIndex": 4,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 5,
-              "Title": "Menu.cs",
-              "DocumentMoniker": "E:\\backend course\\Projects\\Project-Quizes-System\\QuizeSystem-OOP-SQL\\Menu.cs",
-              "RelativeDocumentMoniker": "Menu.cs",
-              "ToolTip": "E:\\backend course\\Projects\\Project-Quizes-System\\QuizeSystem-OOP-SQL\\Menu.cs",
-              "RelativeToolTip": "Menu.cs",
-              "ViewState": "AgIAAEQAAAAAlZmZmZkbwEwAAAA5AAAAAAAAAA==",
+              "DocumentIndex": 14,
+              "Title": "QuizQuestion.cs",
+              "DocumentMoniker": "E:\\backend course\\Projects\\Project-Quizes-System\\QuizeSystem-OOP-SQL\\QuizQuestion.cs",
+              "RelativeDocumentMoniker": "QuizQuestion.cs",
+              "ToolTip": "E:\\backend course\\Projects\\Project-Quizes-System\\QuizeSystem-OOP-SQL\\QuizQuestion.cs",
+              "RelativeToolTip": "QuizQuestion.cs",
+              "ViewState": "AgIAABkAAAAAAAAAAAAWwCMAAAASAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-07-17T19:49:49.778Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-08-03T16:28:07.696Z",
+              "IsPinned": true
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
-              "Title": "Person.cs",
-              "DocumentMoniker": "E:\\backend course\\Projects\\Project-Quizes-System\\QuizeSystem-OOP-SQL\\Person.cs",
-              "RelativeDocumentMoniker": "Person.cs",
-              "ToolTip": "E:\\backend course\\Projects\\Project-Quizes-System\\QuizeSystem-OOP-SQL\\Person.cs",
-              "RelativeToolTip": "Person.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA4AAAAWAAAAAAAAAA==",
+              "DocumentIndex": 2,
+              "Title": "Student.cs",
+              "DocumentMoniker": "E:\\backend course\\Projects\\Project-Quizes-System\\QuizeSystem-OOP-SQL\\Student.cs",
+              "RelativeDocumentMoniker": "Student.cs",
+              "ToolTip": "E:\\backend course\\Projects\\Project-Quizes-System\\QuizeSystem-OOP-SQL\\Student.cs",
+              "RelativeToolTip": "Student.cs",
+              "ViewState": "AgIAAAMBAAAAY2ZmZmYuwBoBAAArAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-07-17T14:08:58.634Z",
+              "WhenOpened": "2026-08-03T19:12:12.87Z",
+              "IsPinned": true,
               "EditorCaption": ""
             },
             {
@@ -84,106 +105,171 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "Quize.cs",
-              "DocumentMoniker": "E:\\backend course\\Projects\\Project-Quizes-System\\QuizeSystem-OOP-SQL\\Quize.cs",
-              "RelativeDocumentMoniker": "Quize.cs",
-              "ToolTip": "E:\\backend course\\Projects\\Project-Quizes-System\\QuizeSystem-OOP-SQL\\Quize.cs",
-              "RelativeToolTip": "Quize.cs",
-              "ViewState": "AgIAAAgAAADgy8zMzMwgwCIAAAAAAAAAAAAAAA==",
+              "DocumentIndex": 10,
+              "Title": "QuizQuestionsManagment.cs",
+              "DocumentMoniker": "E:\\backend course\\Projects\\Project-Quizes-System\\QuizeSystem-OOP-SQL\\QuizQuestionsManagment.cs",
+              "RelativeDocumentMoniker": "QuizQuestionsManagment.cs",
+              "ToolTip": "E:\\backend course\\Projects\\Project-Quizes-System\\QuizeSystem-OOP-SQL\\QuizQuestionsManagment.cs",
+              "RelativeToolTip": "QuizQuestionsManagment.cs",
+              "ViewState": "AgIAADwAAAAAAAAAAAAawEUAAAAkAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-07-17T13:45:06.775Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 8,
-              "Title": "Course.cs",
-              "DocumentMoniker": "E:\\backend course\\Projects\\Project-Quizes-System\\QuizeSystem-OOP-SQL\\Course.cs",
-              "RelativeDocumentMoniker": "Course.cs",
-              "ToolTip": "E:\\backend course\\Projects\\Project-Quizes-System\\QuizeSystem-OOP-SQL\\Course.cs",
-              "RelativeToolTip": "Course.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAACcAAAA2AAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-07-16T18:02:49.263Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 7,
-              "Title": "Student.cs",
-              "DocumentMoniker": "E:\\backend course\\Projects\\Project-Quizes-System\\QuizeSystem-OOP-SQL\\Student.cs",
-              "RelativeDocumentMoniker": "Student.cs",
-              "ToolTip": "E:\\backend course\\Projects\\Project-Quizes-System\\QuizeSystem-OOP-SQL\\Student.cs",
-              "RelativeToolTip": "Student.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-07-10T22:31:46.977Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 6,
-              "Title": "Admin.cs",
-              "DocumentMoniker": "E:\\backend course\\Projects\\Project-Quizes-System\\QuizeSystem-OOP-SQL\\Admin.cs",
-              "RelativeDocumentMoniker": "Admin.cs",
-              "ToolTip": "E:\\backend course\\Projects\\Project-Quizes-System\\QuizeSystem-OOP-SQL\\Admin.cs",
-              "RelativeToolTip": "Admin.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA8AAAAHAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-07-10T22:31:44.869Z",
+              "WhenOpened": "2026-08-03T19:45:56.137Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 0,
-              "Title": "IRegister.cs",
-              "DocumentMoniker": "E:\\backend course\\Projects\\Project-Quizes-System\\QuizeSystem-OOP-SQL\\IRegister.cs",
-              "RelativeDocumentMoniker": "IRegister.cs",
-              "ToolTip": "E:\\backend course\\Projects\\Project-Quizes-System\\QuizeSystem-OOP-SQL\\IRegister.cs",
-              "RelativeToolTip": "IRegister.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA0AAAAAAAAAAAAAAA==",
+              "Title": "Data.cs",
+              "DocumentMoniker": "E:\\backend course\\Projects\\Project-Quizes-System\\QuizeSystem-OOP-SQL\\Data.cs",
+              "RelativeDocumentMoniker": "Data.cs",
+              "ToolTip": "E:\\backend course\\Projects\\Project-Quizes-System\\QuizeSystem-OOP-SQL\\Data.cs",
+              "RelativeToolTip": "Data.cs",
+              "ViewState": "AgIAACoAAAAAm5mZmRkZwD4AAABYAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-07-16T17:56:55.527Z",
+              "WhenOpened": "2026-08-04T14:39:10.981Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "Privileges.cs",
+              "DocumentMoniker": "E:\\backend course\\Projects\\Project-Quizes-System\\QuizeSystem-OOP-SQL\\Privileges.cs",
+              "RelativeDocumentMoniker": "Privileges.cs",
+              "ToolTip": "E:\\backend course\\Projects\\Project-Quizes-System\\QuizeSystem-OOP-SQL\\Privileges.cs",
+              "RelativeToolTip": "Privileges.cs",
+              "ViewState": "AgIAADsAAAAAlZmZmZkvwFIAAAAyAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-08-04T16:26:29.46Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "Course.cs",
+              "DocumentMoniker": "E:\\backend course\\Projects\\Project-Quizes-System\\QuizeSystem-OOP-SQL\\Course.cs",
+              "RelativeDocumentMoniker": "Course.cs",
+              "ToolTip": "E:\\backend course\\Projects\\Project-Quizes-System\\QuizeSystem-OOP-SQL\\Course.cs",
+              "RelativeToolTip": "Course.cs",
+              "ViewState": "AgIAACcAAAAAAAAAAADwvzgAAAAUAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-08-04T15:30:20.769Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "Person.cs",
+              "DocumentMoniker": "E:\\backend course\\Projects\\Project-Quizes-System\\QuizeSystem-OOP-SQL\\Person.cs",
+              "RelativeDocumentMoniker": "Person.cs",
+              "ToolTip": "E:\\backend course\\Projects\\Project-Quizes-System\\QuizeSystem-OOP-SQL\\Person.cs",
+              "RelativeToolTip": "Person.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABkAAAAZAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-08-04T14:43:54.613Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 1,
-              "Title": "Teacher.cs",
-              "DocumentMoniker": "E:\\backend course\\Projects\\Project-Quizes-System\\QuizeSystem-OOP-SQL\\Teacher.cs",
-              "RelativeDocumentMoniker": "Teacher.cs",
-              "ToolTip": "E:\\backend course\\Projects\\Project-Quizes-System\\QuizeSystem-OOP-SQL\\Teacher.cs",
-              "RelativeToolTip": "Teacher.cs",
-              "ViewState": "AgIAADUAAABg/P////86wFMAAAAAAAAAAAAAAA==",
+              "Title": "Menu.cs",
+              "DocumentMoniker": "E:\\backend course\\Projects\\Project-Quizes-System\\QuizeSystem-OOP-SQL\\Menu.cs",
+              "RelativeDocumentMoniker": "Menu.cs",
+              "ToolTip": "E:\\backend course\\Projects\\Project-Quizes-System\\QuizeSystem-OOP-SQL\\Menu.cs*",
+              "RelativeToolTip": "Menu.cs*",
+              "ViewState": "AgIAADYAAADAyszMzMwmwD0AAAA3AAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-07-10T22:31:47.151Z",
+              "WhenOpened": "2026-08-04T14:44:47.24Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "QuizeQuestion.cs",
-              "DocumentMoniker": "E:\\backend course\\Projects\\Project-Quizes-System\\QuizeSystem-OOP-SQL\\QuizeQuestion.cs",
-              "RelativeDocumentMoniker": "QuizeQuestion.cs",
-              "ToolTip": "E:\\backend course\\Projects\\Project-Quizes-System\\QuizeSystem-OOP-SQL\\QuizeQuestion.cs",
-              "RelativeToolTip": "QuizeQuestion.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAADgAAAAJAAAAAAAAAA==",
+              "DocumentIndex": 5,
+              "Title": "Admin.cs",
+              "DocumentMoniker": "E:\\backend course\\Projects\\Project-Quizes-System\\QuizeSystem-OOP-SQL\\Admin.cs",
+              "RelativeDocumentMoniker": "Admin.cs",
+              "ToolTip": "E:\\backend course\\Projects\\Project-Quizes-System\\QuizeSystem-OOP-SQL\\Admin.cs",
+              "RelativeToolTip": "Admin.cs",
+              "ViewState": "AgIAAIMAAAAAAAAAAAAcwHEAAAAgAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-07-16T17:28:55.633Z",
+              "WhenOpened": "2026-08-04T19:29:10.81Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "Quiz.cs",
+              "DocumentMoniker": "E:\\backend course\\Projects\\Project-Quizes-System\\QuizeSystem-OOP-SQL\\Quiz.cs",
+              "RelativeDocumentMoniker": "Quiz.cs",
+              "ToolTip": "E:\\backend course\\Projects\\Project-Quizes-System\\QuizeSystem-OOP-SQL\\Quiz.cs",
+              "RelativeToolTip": "Quiz.cs",
+              "ViewState": "AgIAACoAAAAAAAAAAAAUwEkAAAAaAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-08-03T16:18:59.077Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 9,
+              "Title": "SystemAccessControl.cs",
+              "DocumentMoniker": "E:\\backend course\\Projects\\Project-Quizes-System\\QuizeSystem-OOP-SQL\\SystemAccessControl.cs",
+              "RelativeDocumentMoniker": "SystemAccessControl.cs",
+              "ToolTip": "E:\\backend course\\Projects\\Project-Quizes-System\\QuizeSystem-OOP-SQL\\SystemAccessControl.cs",
+              "RelativeToolTip": "SystemAccessControl.cs",
+              "ViewState": "AgIAAB8AAAAAAAAAAAAawC8AAAARAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-08-04T14:52:52.555Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 11,
+              "Title": "Helpers.cs",
+              "DocumentMoniker": "E:\\backend course\\Projects\\Project-Quizes-System\\QuizeSystem-OOP-SQL\\Helpers.cs",
+              "RelativeDocumentMoniker": "Helpers.cs",
+              "ToolTip": "E:\\backend course\\Projects\\Project-Quizes-System\\QuizeSystem-OOP-SQL\\Helpers.cs",
+              "RelativeToolTip": "Helpers.cs",
+              "ViewState": "AgIAABMAAAAAAAAAAAAQwB0AAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-08-04T15:16:43.46Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
               "Title": "Program.cs",
               "DocumentMoniker": "E:\\backend course\\Projects\\Project-Quizes-System\\QuizeSystem-OOP-SQL\\Program.cs",
               "RelativeDocumentMoniker": "Program.cs",
               "ToolTip": "E:\\backend course\\Projects\\Project-Quizes-System\\QuizeSystem-OOP-SQL\\Program.cs",
               "RelativeToolTip": "Program.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAAAFAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAAAiAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2026-07-01T07:37:01.021Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 12,
+              "Title": "IViewable.cs",
+              "DocumentMoniker": "E:\\backend course\\Projects\\Project-Quizes-System\\QuizeSystem-OOP-SQL\\IViewable.cs",
+              "RelativeDocumentMoniker": "IViewable.cs",
+              "ToolTip": "E:\\backend course\\Projects\\Project-Quizes-System\\QuizeSystem-OOP-SQL\\IViewable.cs",
+              "RelativeToolTip": "IViewable.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAAAYAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-08-04T15:28:04.044Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 13,
+              "Title": "QuizManagment.cs",
+              "DocumentMoniker": "E:\\backend course\\Projects\\Project-Quizes-System\\QuizeSystem-OOP-SQL\\QuizManagment.cs",
+              "RelativeDocumentMoniker": "QuizManagment.cs",
+              "ToolTip": "E:\\backend course\\Projects\\Project-Quizes-System\\QuizeSystem-OOP-SQL\\QuizManagment.cs",
+              "RelativeToolTip": "QuizManagment.cs",
+              "ViewState": "AgIAACAAAACAaGZmZmYgwD0AAAANAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-08-03T19:28:54.992Z",
               "EditorCaption": ""
             }
           ]

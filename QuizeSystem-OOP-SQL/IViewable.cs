@@ -6,8 +6,8 @@ using System.Threading.Tasks;
 
 namespace QuizeSystem_OOP_SQL
 {
-    internal interface IRegister
+    public interface IViewable
     {
-        IRegister Register();
+        void ViewDetails();
     }
 }

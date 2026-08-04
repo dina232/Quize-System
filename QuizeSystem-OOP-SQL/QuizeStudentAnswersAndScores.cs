@@ -6,18 +6,18 @@ using System.Threading.Tasks;
 
 namespace QuizeSystem_OOP_SQL
 {
-    internal class QuizeStudentAnswersAndScores
+    public class QuizeStudentAnswersAndScores
     {
-        public Quize quize;
+        public Quiz quiz;
         public float Score { get; set; }
         public List<string> Answers { get; set; }
 
-        public QuizeStudentAnswersAndScores(Quize quize,float score, List<string> answers) 
+        public QuizeStudentAnswersAndScores(Quiz quiz,float score, List<string> answers) 
         {
-            if (score > quize.TotalScore || score < 0) throw new Exception("Invalid Score!");
-            if(quize is null) throw new NullReferenceException("quize");
+            if (score > quiz.TotalScore || score < 0) throw new Exception("Invalid Score!");
+            if(quiz is null) throw new NullReferenceException("quiz");
             if (answers is null) score = 0;
-            this.quize = quize;
+            this.quiz = quiz;
             Score = score;
             Answers = answers;
         

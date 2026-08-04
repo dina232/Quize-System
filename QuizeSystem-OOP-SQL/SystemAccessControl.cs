@@ -12,13 +12,14 @@ namespace QuizeSystem_OOP_SQL
         Student,
         Teacher
     }
+    
     internal static class SystemAccessControl
     {
-        internal static void ShowLoginMenu()
+        internal static Person ShowLoginMenu()
         {
             Console.Write("Email : ");
             var email = Console.ReadLine();
-            if (!CheckEmailExiestance(email))
+            if (email == null || !Helpers.CheckEmailExiestance(email))
             {
                 Console.WriteLine("Invalid Email! , Please enter valid one or Sign up");
                 Console.Write("Do you want to Register ? Login or Register ?");
@@ -29,115 +30,83 @@ namespace QuizeSystem_OOP_SQL
                     if (Enum.TryParse(answer, true, out enum_answer ))
                     {
                         if (enum_answer == EnteringState.Register)
-                        {
-                            ShowRegisterMenu();
-                        }
+                            return ShowRegisterMenu();
                         else
-                            ShowLoginMenu();
-                        break;
+                            return ShowLoginMenu();
                     }
                     else
                         Console.Write("Invalid input. Please enter 'Login' or 'Register' : ");
                 }
-                return;
-            }
-            Console.Write("Password : ");
-            var password = Console.ReadLine();
-            CheckPassword(email, password);
-        }
-        internal static bool CheckPassword(string email, string password)
-        {
-            if (Menu.SystemPersons[email].Passward == password)
-                return true;
-            return false;
-        }
-
-        internal static bool CheckEmailExiestance(string email)
-        {
-            if (Menu.SystemPersons.ContainsKey(email))
-                return true;
-            return false;
-        }
-
-        internal static void  TakeRegestrationBasicInfo(out string email , out string password , out string name)
-        {
-            while (true)
-            {
-                Console.Write("Enter your name: ");
-                name = Console.ReadLine();
-                if (name.Length < 2 || name == null)
-                {
-                    Console.WriteLine("Invalid. Please enter a valid name.");
-                    continue;
-                }
-                break;
             }
             while (true)
             {
-                Console.Write("Enter your email: ");
-                email = Console.ReadLine();
-                if (email.Length < 7 || email == null || !email.Contains('@')) 
+                Console.Write("Password : ");
+                var password = Console.ReadLine();
+                if (Helpers.CheckPassword(email, password))
+                    return Data.SystemPersons[email];
+                Console.WriteLine("Wrong Password!Do you want to Try write it Again ? [y/n]");
+                while (true)
                 {
-                    Console.WriteLine("Invalid. Please enter a valid email.");
-                    continue;
+                    var answer = Console.ReadLine();
+                    if (string.Equals(answer, "y", StringComparison.OrdinalIgnoreCase))
+                        break;
+                    else if (string.Equals(answer, "n", StringComparison.OrdinalIgnoreCase))
+                        OperatingClass.Starting();
+                    else
+                        Console.WriteLine("Please enter a valid answer!");
                 }
-                if(Menu.SystemPersons.ContainsKey(email))
-                {
-                    Console.WriteLine("This Email Already Exists. Please enter a different email.");
-                    continue;
-                }
-                break;
+                    
             }
-            while (true)
-            {
-                Console.Write("Enter your password: ");
-                password = Console.ReadLine();
-                if (password.Length < 8 || password == null)
-                {
-                    Console.WriteLine("passward must be at least 8 charachter length. Please enter a valid email.");
-                    continue;
-                }
-                break;
-            }   
         }
-        internal static void ShowRegisterMenu()
+        
+        internal static Person ShowRegisterMenu()
         {
             Console.WriteLine("1. Register as a Student");
             Console.WriteLine("2. Register as a Teacher");
-            Console.Write("Please select an option (student or teacher ): ");
-            var roleInput = Console.ReadLine();
+            
             Role role;
             string email , password , name ;
-            if (Enum.TryParse(roleInput,true,out role)) 
+            while (true)
             {
-                if (role == Role.Student)
+                Console.Write("Please select an option (student or teacher ): ");
+                var roleInput = Console.ReadLine();
+                if (Enum.TryParse(roleInput, true, out role))
                 {
-                    TakeRegestrationBasicInfo(out email, out password, out name);
-                    Student student = new Student(name, email, password);
-                    Menu.Students.Add(student); 
-                    Menu.SystemPersons[email] = student;
-                }
-                else if (role == Role.Teacher)
-                {
-                    TakeRegestrationBasicInfo(out email, out password, out name);
-                    TeacherTitle title;
-                    while (true)
+                    Helpers.TakeRegestrationBasicInfo(out email, out password, out name);
+                    if (role == Role.Student)
                     {
-                        Console.Write("Your Title (Professor, ProfessorAssistant or Instructor): ");
-                        var titleString = Console.ReadLine();
-                        if (Enum.TryParse(titleString, true, out title))
-                        {
-                            Console.WriteLine("Invalid title. Please enter a valid title.");
-                            continue ;
-                        }
-                        break;
+                        Student student = new Student(name, email, password);
+                        Data.Students.Add(student);
+                        Data.SystemPersons[email] = student;
+                        Console.WriteLine("Registered Successfully!");
+                        Privileges.StudentPrivileges(student);
+                        return student;
                     }
-                    Teacher teacher = new Teacher(name, email, password,title);
-                    Menu.Teachers.Add(teacher);
-                    Menu.SystemPersons[email] = teacher;
-                }
-            }
+                    else if (role == Role.Teacher)
+                    {
+                        TeacherTitle title;
+                        while (true)
+                        {
+                            Console.Write("Your Title (Professor, ProfessorAssistant or Instructor): ");
+                            var titleString = Console.ReadLine();
+                            if (Enum.TryParse(titleString, true, out title))
+                            {
+                                Console.WriteLine("Invalid title. Please enter a valid title.");
+                                continue;
+                            }
+                            break;
+                        }
+                        Teacher teacher = new Teacher(name, email, password, title);
+                        Data.Teachers.Add(teacher);
+                        Data.SystemPersons[email] = teacher;
+                        Console.WriteLine("Registered Successfully!");
+                        Privileges.TeacherPrivileges(teacher);
+                        return teacher;
+                    }
 
+                }
+                Console.WriteLine("Please Enter A valid Role!");
+            }
         }
     }
 }

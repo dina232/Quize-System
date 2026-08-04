@@ -1,0 +1,15 @@
+E:\backend course\Projects\Project-Quizes-System\QuizeSystem-OOP-SQL\bin\Debug\net8.0\QuizeSystem-OOP-SQL.exe
+E:\backend course\Projects\Project-Quizes-System\QuizeSystem-OOP-SQL\bin\Debug\net8.0\QuizeSystem-OOP-SQL.deps.json
+E:\backend course\Projects\Project-Quizes-System\QuizeSystem-OOP-SQL\bin\Debug\net8.0\QuizeSystem-OOP-SQL.runtimeconfig.json
+E:\backend course\Projects\Project-Quizes-System\QuizeSystem-OOP-SQL\bin\Debug\net8.0\QuizeSystem-OOP-SQL.dll
+E:\backend course\Projects\Project-Quizes-System\QuizeSystem-OOP-SQL\bin\Debug\net8.0\QuizeSystem-OOP-SQL.pdb
+E:\backend course\Projects\Project-Quizes-System\QuizeSystem-OOP-SQL\obj\Debug\net8.0\QuizeSystem-OOP-SQL.GeneratedMSBuildEditorConfig.editorconfig
+E:\backend course\Projects\Project-Quizes-System\QuizeSystem-OOP-SQL\obj\Debug\net8.0\QuizeSystem-OOP-SQL.AssemblyInfoInputs.cache
+E:\backend course\Projects\Project-Quizes-System\QuizeSystem-OOP-SQL\obj\Debug\net8.0\QuizeSystem-OOP-SQL.AssemblyInfo.cs
+E:\backend course\Projects\Project-Quizes-System\QuizeSystem-OOP-SQL\obj\Debug\net8.0\QuizeSystem-OOP-SQL.csproj.CoreCompileInputs.cache
+E:\backend course\Projects\Project-Quizes-System\QuizeSystem-OOP-SQL\obj\Debug\net8.0\QuizeSystem-OOP-SQL.sourcelink.json
+E:\backend course\Projects\Project-Quizes-System\QuizeSystem-OOP-SQL\obj\Debug\net8.0\QuizeSystem-OOP-SQL.dll
+E:\backend course\Projects\Project-Quizes-System\QuizeSystem-OOP-SQL\obj\Debug\net8.0\refint\QuizeSystem-OOP-SQL.dll
+E:\backend course\Projects\Project-Quizes-System\QuizeSystem-OOP-SQL\obj\Debug\net8.0\QuizeSystem-OOP-SQL.pdb
+E:\backend course\Projects\Project-Quizes-System\QuizeSystem-OOP-SQL\obj\Debug\net8.0\QuizeSystem-OOP-SQL.genruntimeconfig.cache
+E:\backend course\Projects\Project-Quizes-System\QuizeSystem-OOP-SQL\obj\Debug\net8.0\ref\QuizeSystem-OOP-SQL.dll

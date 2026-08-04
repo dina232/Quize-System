@@ -6,13 +6,23 @@ using System.Threading.Tasks;
 
 namespace QuizeSystem_OOP_SQL
 {
+    public enum TeacherPreveleges
+    {
+        AssignYourselfToACourse,
+        ViewAssignedCoursesDetails,
+        ReleaseCourse,
+        ViewUnAssignedCourses,
+        CreateQuize,
+        AddQuestionToQuize,
+        RemoveQuestionFromQuize
+    }
     public enum TeacherTitle
     {
         Professor,
         ProfessorAssistant,
         Instructor
     }
-    internal class Teacher : Person 
+    public class Teacher : Person 
     {
         internal TeacherTitle Title;
         internal List<Course> Courses;
@@ -59,23 +69,27 @@ namespace QuizeSystem_OOP_SQL
             }
             return false;
         }
-        internal void ViewUnAssignedCourses() 
+        internal List<int> ViewUnAssignedCourses() 
         {
             int course_number = 1;
-            for(int i = 0;i < Menu.Courses.Count; i++)
+            var ids = new List<int>();
+            for(int i = 0;i < Data.Courses.Count; i++)
             {
-                if (!CheckCourseExistanceInTeacherCourses(Menu.Courses[i]))
+                if (!CheckCourseExistanceInTeacherCourses(Data.Courses[i]))
                 {
+                    Console.WriteLine($"Id : {Data.Courses[i].CourseID}");
                     Console.WriteLine($"Course {course_number}");
-                    Console.WriteLine($"Name : {Menu.Courses[i].CourseName}");
-                    Console.WriteLine($"Category : {Menu.Courses[i].CourseCategory}");
-                    Console.WriteLine($"Duration : {Menu.Courses[i].CourseMonthDuration} months");
+                    Console.WriteLine($"Name : {Data.Courses[i].CourseName}");
+                    Console.WriteLine($"Category : {Data.Courses[i].CourseCategory}");
+                    Console.WriteLine($"Duration : {Data.Courses[i].CourseMonthDuration} months");
+                    ids.Add( i );
                     course_number++;
                 }
             }
 
-        
+            return ids;
         }
+        
         internal void ReleaseCourse(Course course)
         {
             if (course.Students is null) throw new ArgumentNullException("course");
@@ -83,13 +97,10 @@ namespace QuizeSystem_OOP_SQL
             {
                 course.Teacher = null;
                 Courses.Remove(course);
+                Console.WriteLine("Course released successfully!");
+                return;
             }
-            if (course.Students.Count > 0) Console.WriteLine("Can not release a course that has students enrolled in it!");
-            
-        
+            Console.WriteLine("Can not release a course that has students enrolled in it!");
         }
-
-
-
     }
 }
