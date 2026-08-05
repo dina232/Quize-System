@@ -14,7 +14,8 @@ namespace QuizeSystem_OOP_SQL
         ViewUnAssignedCourses,
         CreateQuize,
         AddQuestionToQuize,
-        RemoveQuestionFromQuize
+        RemoveQuestionFromQuize,
+        LogOut
     }
     public enum TeacherTitle
     {

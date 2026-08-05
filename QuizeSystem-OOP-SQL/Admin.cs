@@ -14,7 +14,8 @@ namespace QuizeSystem_OOP_SQL
         AddCourse,
         ViewAllCourses,
         ViewAllTeachers,
-        ViewAllStudents
+        ViewAllStudents,
+        LogOut
     }
     internal class Admin : Person
     {

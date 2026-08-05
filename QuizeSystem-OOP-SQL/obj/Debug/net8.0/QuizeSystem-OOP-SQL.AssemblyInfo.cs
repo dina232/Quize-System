@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("QuizeSystem-OOP-SQL")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+a8f48a658e5ca0c66c573a799fd5e8ae458d8764")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+7099116eaaebda9981522f4761a75871de777995")]
 [assembly: System.Reflection.AssemblyProductAttribute("QuizeSystem-OOP-SQL")]
 [assembly: System.Reflection.AssemblyTitleAttribute("QuizeSystem-OOP-SQL")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

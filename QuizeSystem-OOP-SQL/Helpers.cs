@@ -11,6 +11,11 @@ namespace QuizeSystem_OOP_SQL
 
         internal static Course ChooseCourse(List<Course> courses)
         {
+            if(courses.Count == 0)
+            {
+                Console.WriteLine("No courses available.");
+                return null;
+            }
             foreach (var course in courses)
             {
                 course.ViewDetails();

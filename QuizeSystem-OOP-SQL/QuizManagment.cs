@@ -16,10 +16,16 @@ namespace QuizeSystem_OOP_SQL
                 Console.WriteLine("No Available Quizes");
                 return null;
             }
-            Console.WriteLine("Available Quizes :");
+            Console.WriteLine("╔══════════════════════════════════════╗");
+            Console.WriteLine("║          Available Quizes            ║");
+            Console.WriteLine("╚══════════════════════════════════════╝"); 
             foreach (var quiz in quizes)
             {
-                Console.WriteLine($"Quiz Id : {quiz.QuizId}, Name: {quiz.QuizName}, Course: {quiz.Course.CourseName}");
+                quiz.ViewDetails();
+                Console.WriteLine();
+                Console.WriteLine("──────────────────────────────────────");
+                Console.WriteLine("──────────────────────────────────────");
+                Console.WriteLine();
             }
             while (true)
             {

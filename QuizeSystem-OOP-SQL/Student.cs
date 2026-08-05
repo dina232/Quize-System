@@ -12,7 +12,8 @@ namespace QuizeSystem_OOP_SQL
         ViewAllStudentQuizes,
         EnrollInACourse,
         ViewEnrolledCoursesDetailsAndQuizes,
-        TakeQuize
+        TakeQuize,
+        LogOut
     }
     public class Student : Person 
     {
@@ -106,7 +107,7 @@ namespace QuizeSystem_OOP_SQL
                 if (answers is null) continue;
                 for (int j = 0; j < answers.Answers.Count; j++)
                 {
-                    Console.WriteLine($"Question {j+1} : {answers.quiz.QuizQuestions[j]}");
+                    Console.WriteLine($"Question {j+1} : {answers.quiz.QuizQuestions[j].Question}");
                     Console.WriteLine($"Your answer : {answers.Answers[j]}");
                     Console.ForegroundColor = ConsoleColor.Green;
                     Console.WriteLine($"Correct answer : {answers.quiz.QuizQuestions[j].CorrectAnswer}");
@@ -116,14 +117,27 @@ namespace QuizeSystem_OOP_SQL
                 Console.WriteLine($"Your Score : {answers.Score} ");
                 Console.ForegroundColor = ConsoleColor.White;
 
+                Console.WriteLine("──────────────────────────────────────");
+                Console.WriteLine("──────────────────────────────────────");
+
             }
+            Console.WriteLine("═══════════════════════════════════════");
+            Console.WriteLine("═══════════════════════════════════════");
+
 
         }
         public void ViewAllStudentQuizes()
         {
             foreach (Course course in Courses)
             {
+                Console.WriteLine(" ╔══════════════════════════════════════╗");
+                Console.WriteLine($"           {course.CourseName}          ");
+                Console.WriteLine(" ╚══════════════════════════════════════╝");
                 ViewQuizesDetails(course);
+                Console.WriteLine();
+                Console.WriteLine("═══════════════════════════════════════");
+                Console.WriteLine("═══════════════════════════════════════");
+                Console.WriteLine();
             }
         }
 
@@ -136,15 +150,21 @@ namespace QuizeSystem_OOP_SQL
 
             DateTime end = DateTime.Now.AddMinutes(quize.DurationInMinutes);
             var student_choices = new List<string>();
-            int question_counter = 0;
-            Console.WriteLine($"{quize.QuizName} : {quize.QuizType} :");
+            int question_counter = 1;
+            Console.WriteLine(" ╔══════════════════════════════════════╗");
+            Console.WriteLine($"║{quize.QuizName} : {quize.QuizType}   ║");
+            Console.WriteLine(" ╚══════════════════════════════════════╝");
             float total_score = 0f;
 
             string? answer = null;
             do
             {
-                var question = quize.QuizQuestions[question_counter];
+                var question = quize.QuizQuestions[question_counter-1];
                 float question_score = 0;
+                Console.WriteLine();
+                Console.ForegroundColor = ConsoleColor.Red;
+                Console.WriteLine($"Remaining Time : {end.Minute-DateTime.Now.Minute} M");
+                Console.ResetColor();
                 Console.WriteLine($"Question {question_counter} (Marks : {question.QuestionScore}) :");
                 Console.WriteLine(question.Question);
                 string? chosen_answer = null;
@@ -152,17 +172,20 @@ namespace QuizeSystem_OOP_SQL
                 if (quize.QuizType == QuizType.MultipleChoice)
                 {
                     for (int i = 0; i < 4; i++) Console.Write($"{i+1}.{question.MultipleChoicesQuizeChoices[i]}  ");
-                    Console.Write("Your Answer (enter choice number):");
-                    answer = Console.ReadLine();
-                    int answer_number;
-                    if (int.TryParse(answer, out answer_number) && answer_number > 0 && answer_number < 5)
+                    while (true)
                     {
-                        chosen_answer = question.MultipleChoicesQuizeChoices[answer_number - 1];
-                        student_choices.Add(chosen_answer);
+                        Console.Write("Your Answer (enter choice number):");
+                        answer = Console.ReadLine();
+                        int answer_number;
+                        if (int.TryParse(answer, out answer_number) && answer_number > 0 && answer_number < 5)
+                        {
+                            chosen_answer = question.MultipleChoicesQuizeChoices[answer_number - 1];
+                            student_choices.Add(chosen_answer);
+                            break;
+                        }
+                        Console.WriteLine("Please enter choice Number!");
                         
                     }
-                    else
-                        student_choices.Add(null);
                 }
                 else
                 {
@@ -183,8 +206,10 @@ namespace QuizeSystem_OOP_SQL
                 }
                 EvaluateQuestion(question, chosen_answer, ref question_score);
                 total_score += question_score;
-                if (question_counter == quize.QuizQuestions.Count - 1) break;
+                if (question_counter == quize.QuizQuestions.Count) break;
                 question_counter++;
+                Console.WriteLine("──────────────────────────────────────");
+                Console.WriteLine("──────────────────────────────────────");
             } while (end > DateTime.Now);
 
             var quize_details = new QuizeStudentAnswersAndScores(quize, total_score, student_choices);
@@ -223,7 +248,7 @@ namespace QuizeSystem_OOP_SQL
             Console.ResetColor();
             for (int i = 0; i < quize.QuizQuestions.Count; i++)
             {
-                Console.WriteLine($"{quize.QuizQuestions[i]}");
+                Console.WriteLine($"Question {i+1}");
                 Console.ForegroundColor = ConsoleColor.Green;
                 Console.WriteLine($"Correct Answer : {quize.QuizQuestions[i].CorrectAnswer}");
                 Console.ResetColor();
@@ -236,6 +261,11 @@ namespace QuizeSystem_OOP_SQL
                 }
                 else
                     Console.WriteLine("No Answer");
+
+                Console.WriteLine();
+                Console.WriteLine("──────────────────────────────────────");
+                Console.WriteLine();
+
             }
 
         }

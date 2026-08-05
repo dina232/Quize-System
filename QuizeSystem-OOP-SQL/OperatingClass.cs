@@ -20,13 +20,20 @@ namespace QuizeSystem_OOP_SQL
 
         internal static Person Starting()
         {
-            Console.WriteLine("Welcome to the Quiz System!");
+            Console.WriteLine("╔══════════════════════════════════════╗");
+            Console.WriteLine("║        QUIZ MANAGEMENT SYSTEM        ║");
+            Console.WriteLine("╚══════════════════════════════════════╝");
+
+            Console.WriteLine("▶ Welcome!");
             Data.InitializeData();
             Person person = null;
-            Console.WriteLine("Have an account? or will you get one ?");
+            Console.WriteLine("▶ Have an account? or will you get one ?");
             while (true)
             {
-                Console.Write("Login or Register ? Write one : ");
+                Console.WriteLine("[1] Login");
+                Console.WriteLine("[2] Register");
+                Console.Write("Write one : ");
+
                 var answer = Console.ReadLine();
                 if (Enum.TryParse<EnteringState>(answer, true, out EnteringState state))
                 {

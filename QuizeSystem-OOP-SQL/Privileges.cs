@@ -35,6 +35,10 @@ namespace QuizeSystem_OOP_SQL
                     case (AdminPreveleges.ViewAllTeachers):
                         admin.ViewAllTeachers();
                         break;
+                    case (AdminPreveleges.LogOut):
+                        Console.WriteLine("Logging out...");
+                        OperatingClass.Starting();
+                        break;
                 }
             }
             Console.ForegroundColor = ConsoleColor.White;
@@ -46,12 +50,12 @@ namespace QuizeSystem_OOP_SQL
             Console.WriteLine("------------------------------------------------");
             Console.WriteLine($"Welcome {student.Name}");
             Console.WriteLine("What do you need to do now ?");
-            Console.WriteLine("1.Enroll in a Course (EnrollInACourse)");
-            Console.WriteLine("2.Take a quize (TakeQuize)");
+            Console.WriteLine("1. Enroll in a Course (EnrollInACourse)");
+            Console.WriteLine("2. Take a quize (TakeQuize)");
 
-            Console.WriteLine("3.View All Course (ViewAllCourses) ");
-            Console.WriteLine("4.View All Student Quizes (ViewAllStudentQuizes)");
-            Console.WriteLine("5.View Enrolled Courses Details And Quizes (ViewEnrolledCoursesDetailsAndQuizes)");
+            Console.WriteLine("3. View All Course (ViewAllCourses) ");
+            Console.WriteLine("4. View All Student Quizes (ViewAllStudentQuizes)");
+            Console.WriteLine("5. View Enrolled Courses Details And Quizes (ViewEnrolledCoursesDetailsAndQuizes)");
 
             
             while (true)
@@ -63,15 +67,7 @@ namespace QuizeSystem_OOP_SQL
                     switch (desire)
                     {
                         case (StudentPrivilege.EnrollInACourse):
-
-                            Console.ForegroundColor= ConsoleColor.Yellow;
-                            List<Course> courses = Data.Courses.Select(a => a.Value).ToList();
-                            Console.WriteLine();
-                            Console.WriteLine("Available Courses : ");
-                            var course = Helpers.ChooseCourse(Data.Courses.Where(a => a.Value.Teacher != null && !a.Value.Students.Contains(student)).Select(a => a.Value).ToList());
-                            student.EnrollInACourse(course);
-                            Console.WriteLine($"You have been enrolled in {course.CourseName} successfully!");
-
+                            CourseManagment.EnrollInCourse(student);
                             break;
                         case (StudentPrivilege.TakeQuize):
                             List<Quiz> studentQuizes = student.QuizeStudentAnswersAndScores.Select(a => a.quiz).ToList();
@@ -88,6 +84,10 @@ namespace QuizeSystem_OOP_SQL
                         case (StudentPrivilege.ViewEnrolledCoursesDetailsAndQuizes):
                             student.ViewEnrolledCoursesDetailsAndQuizes();
                             break;
+                        case (StudentPrivilege.LogOut):
+                            Console.WriteLine("Logging out...");
+                            OperatingClass.Starting();
+                            break;
                     }
                     break;
                 }
@@ -96,7 +96,6 @@ namespace QuizeSystem_OOP_SQL
 
         internal static void TeacherPrivileges(Teacher teacher)
         {
-            //RemoveQuestionFromQuize
 
             Console.WriteLine($"Welcome {teacher.Title}: {teacher.Name}");
             Console.WriteLine("What do you need to do now ?");
@@ -141,6 +140,13 @@ namespace QuizeSystem_OOP_SQL
                     case (TeacherPreveleges.RemoveQuestionFromQuize):
                         QuizQuestionsManagment.EditAQuiz(teacher, EditOperation.RemoveQuestion);
                         break;
+
+                    case (TeacherPreveleges.LogOut):
+                        Console.WriteLine("Logging out...");
+                        OperatingClass.Starting();
+                        break;
+
+
                 }
             }
         }
