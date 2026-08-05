@@ -24,7 +24,15 @@ namespace QuizeSystem_OOP_SQL
 
         internal static void EditAQuiz(Teacher teacher, EditOperation edit)
         {
-            var quiz = QuizManagment.ChooseQuiz(teacher.Courses.SelectMany(a => a.Quizes).Where(a => a.IsEqualInQuestionsScores == true).ToList());
+            var quiz = QuizManagment.ChooseQuiz(teacher.Courses.SelectMany(a => a.Quizes).Where(a => a.IsEqualInQuestionsScores == true && a.Students.Count()==0).ToList());
+            if (quiz == null)
+            {
+                Console.ForegroundColor = ConsoleColor.Red;
+                Console.WriteLine("No valid quiz found!");
+                Console.WriteLine("You Can Only Edit Quizes That Have Equal Question Scores And No Students Attempted Them!");
+                Console.ResetColor();
+                return;
+            }
             int questionsNumber;
             if (edit == EditOperation.AddQuestion)
             {
@@ -35,8 +43,11 @@ namespace QuizeSystem_OOP_SQL
             {
                 int questionIndex = ChooseQuestion(quiz);
                 quiz.QuizQuestions.RemoveAt(questionIndex);
+                Console.ForegroundColor = ConsoleColor.Red;
                 Console.WriteLine("Question Removed Successfully!");
             }
+            Console.ForegroundColor = ConsoleColor.Gray;
+            Console.WriteLine();
             quiz.RedistributeQuestionScores(edit);
         }
         internal static void TakeAQuestionFromTeacher(Quiz quiz, int questionsNumber, int i)
@@ -55,11 +66,17 @@ namespace QuizeSystem_OOP_SQL
                 if (question != null && question.Length > 7) break;
                 Console.WriteLine("Please enter a valid question!(must have more than 7 charachters)");
             }
-            if (quiz.QuizType != QuizType.MultipleChoice)
+            if (quiz.QuizType == QuizType.ShortAnswer)
             {
                 Console.ForegroundColor = ConsoleColor.Green;
                 correctAnswer = Helpers.ValidateUserStringAnswer("Correct answer :");
-                Console.ResetColor();
+                Console.ForegroundColor = ConsoleColor.Gray;
+            }
+            else if (quiz.QuizType == QuizType.TrueOrFalse)
+            {
+                Console.ForegroundColor = ConsoleColor.Green;
+                correctAnswer = Helpers.GetTrueFalseAnswer();
+                Console.ForegroundColor = ConsoleColor.Gray;
             }
             else
             {
@@ -70,22 +87,25 @@ namespace QuizeSystem_OOP_SQL
                     choice = Helpers.ValidateUserStringAnswer("Choice" + (j + 1) + ":");
                     choices[j] = choice;
                 }
+                Console.ForegroundColor = ConsoleColor.Green;
                 Console.Write("Enter correct choice number : ");
                 while (true)
                 {
                     var answer = Console.ReadLine();
                     if (int.TryParse(answer, out correctChoiceIndex) && correctChoiceIndex > 0 && correctChoiceIndex < 5) break;
+                    Console.ForegroundColor = ConsoleColor.Red;
                     Console.WriteLine("Please enter a choice number!");
                 }
+                Console.ForegroundColor = ConsoleColor.Gray;
 
 
             }
             if (areEqualInScore)
             {
                 if (quiz.QuizType == QuizType.MultipleChoice)
-                    quiz.AddQuestion(question, choices, correctChoiceIndex, quiz.TotalScore / questionsNumber);
+                    quiz.AddQuestion(question, choices, correctChoiceIndex);
                 else
-                    quiz.AddQuestion(question, correctAnswer, quiz.TotalScore / questionsNumber);
+                    quiz.AddQuestion(question, correctAnswer);
             }
             else
             {
@@ -108,24 +128,25 @@ namespace QuizeSystem_OOP_SQL
                 else
                     quiz.AddQuestion(question, correctAnswer, score);
             }
-            Console.WriteLine($"Question{i + 1} added Successfully!", ConsoleColor.Green);
+            Console.ForegroundColor = ConsoleColor.Green;
+            Console.WriteLine($"Question{i + 1} added Successfully!");
+            Console.ResetColor();
         }
         internal static void TakeQuestionsFromTeacher(Quiz quiz)
         {
-            int questionsNumber;
+            int questionsNumber = quiz.QuestionsNumber;
             Console.WriteLine("--------------------------");
-            Console.Write("How many Question you want to add to this quiz? ");
-            while (true)
-            {
-                var answer = Console.ReadLine();
-                if (int.TryParse(answer, out questionsNumber) && questionsNumber > 0) break;
-                Console.WriteLine("Please enter a valid number!");
-            }
+
+            Console.ForegroundColor = ConsoleColor.Magenta;
+
             for (int i = 0; i < questionsNumber; i++)
             {
                 TakeAQuestionFromTeacher(quiz, questionsNumber, i);
             }
-            Console.WriteLine("Quiz Created Successfully!", ConsoleColor.DarkBlue);
+            Console.ForegroundColor = ConsoleColor.Green;
+            Console.WriteLine("Quiz Created Successfully!");
+            Console.ForegroundColor = ConsoleColor.Gray;
+
         }
     }
 }

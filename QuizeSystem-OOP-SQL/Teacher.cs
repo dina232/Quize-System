@@ -44,22 +44,36 @@ namespace QuizeSystem_OOP_SQL
         }
         internal void ViewAssignedCoursesDetails() 
         {
-            if (Courses is null || Courses.Count == 0) 
+            if (Courses.Count == 0)
             {
+                Console.ForegroundColor = ConsoleColor.Red;
                 Console.WriteLine("No Assigned Courses yet!");
-                return;
             }
-            for (int i = 0; i < Courses.Count; i++)
+            else
             {
-                Console.WriteLine($"Course {i+1}");
-                Console.WriteLine($"Name : {Courses[i].CourseName}");
-                Console.WriteLine($"Category : {Courses[i].CourseCategory}");
-                Console.WriteLine($"Number Of Lessons : {Courses[i].NumberOfLessons}");
-                Console.WriteLine($"Duration : {Courses[i].CourseMonthDuration} months");
-                Console.WriteLine($"Current Quizes number : {Courses[i].Quizes.Count}");
+                Console.WriteLine();
+                Console.ForegroundColor = ConsoleColor.Cyan;
+                Console.WriteLine("╔══════════════════════════════════════╗");
+                Console.WriteLine("║            Your Courses              ║");
+                Console.WriteLine("╚══════════════════════════════════════╝");
 
+                Console.ForegroundColor = ConsoleColor.Yellow;
+                for (int i = 0; i < Courses.Count; i++)
+                {
+                    Console.WriteLine();
+                    Console.WriteLine($"Course {i + 1}");
+                    Console.WriteLine($"Name : {Courses[i].CourseName}");
+                    Console.WriteLine($"Category : {Courses[i].CourseCategory}");
+                    Console.WriteLine($"Number Of Lessons : {Courses[i].NumberOfLessons}");
+                    Console.WriteLine($"Duration : {Courses[i].CourseMonthDuration} months");
+                    Console.WriteLine($"Current Quizes number : {Courses[i].Quizes.Count}");
+                    Console.WriteLine();
+                    Console.WriteLine("──────────────────────────────────────");
+                    Console.WriteLine("──────────────────────────────────────");
+
+                }
             }
-
+            Console.ForegroundColor = ConsoleColor.Gray;
         }
         internal bool CheckCourseExistanceInTeacherCourses(Course course)
         {
@@ -70,28 +84,36 @@ namespace QuizeSystem_OOP_SQL
             }
             return false;
         }
-        internal List<int> ViewUnAssignedCourses() 
+        internal void ViewUnAssignedCourses() 
         {
             int course_number = 1;
-            var ids = new List<int>();
-            for(int i = 0;i < Data.Courses.Count; i++)
+            var courses = Data.Courses.Where(a => !Courses.Contains(a.Value)).Select(a => a.Value).ToList();
+            Console.ForegroundColor = ConsoleColor.Cyan;
+            Console.WriteLine();
+            Console.WriteLine("╔══════════════════════════════════════╗");
+            Console.WriteLine("║           UnAssigned Courses         ║");
+            Console.WriteLine("╚══════════════════════════════════════╝");
+            Console.WriteLine();
+            Console.ForegroundColor = ConsoleColor.Yellow;
+            foreach (var course in courses) 
             {
-                if (!CheckCourseExistanceInTeacherCourses(Data.Courses[i]))
-                {
-                    Console.WriteLine($"Id : {Data.Courses[i].CourseID}");
                     Console.WriteLine($"Course {course_number}");
-                    Console.WriteLine($"Name : {Data.Courses[i].CourseName}");
-                    Console.WriteLine($"Category : {Data.Courses[i].CourseCategory}");
-                    Console.WriteLine($"Duration : {Data.Courses[i].CourseMonthDuration} months");
-                    ids.Add( i );
+                    Console.WriteLine($"Name : {course.CourseName}");
+                    Console.WriteLine($"Id : {course.CourseID}");
+                    Console.WriteLine($"Category : {course.CourseCategory}");
+                    Console.WriteLine($"Duration : {course.CourseMonthDuration} months");
                     course_number++;
-                }
-            }
+                    Console.WriteLine();
+                    Console.WriteLine("──────────────────────────────────────");
+                    Console.WriteLine("──────────────────────────────────────");
+                    Console.WriteLine();
 
-            return ids;
+            }
+            Console.ForegroundColor = ConsoleColor.Green;
+
         }
-        
-        internal void ReleaseCourse(Course course)
+
+        internal void ReleaseCourseBasicFunc(Course course)
         {
             if (course.Students is null) throw new ArgumentNullException("course");
             if(course.Students.Count == 0)

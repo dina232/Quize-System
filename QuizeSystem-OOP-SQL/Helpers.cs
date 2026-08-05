@@ -9,27 +9,18 @@ namespace QuizeSystem_OOP_SQL
     public static class Helpers
     {
 
-        internal static Course ChooseCourse(List<Course> courses)
+        public static string GetTrueFalseAnswer()
         {
-            if(courses.Count == 0)
-            {
-                Console.WriteLine("No courses available.");
-                return null;
-            }
-            foreach (var course in courses)
-            {
-                course.ViewDetails();
-                Console.WriteLine("-------------------------------");
-            }
             while (true)
             {
-                Console.Write("Enter the Course ID you want to choose: ");
-                var courseIdString = Console.ReadLine();
-                if (int.TryParse(courseIdString, out int courseId) && courses.Any(a => a.CourseID == courseId))
+                Console.Write("Answer (true/false): ");
+                string answer = Console.ReadLine();
+
+                if (bool.TryParse(answer, out bool _))
                 {
-                    return courses.First(a => a.CourseID == courseId);
+                    return answer;
                 }
-                Console.WriteLine("Invalid Course ID! Please enter a valid one.");
+                Console.WriteLine("Invalid input. Please enter 'true' or 'false'.");
             }
         }
 

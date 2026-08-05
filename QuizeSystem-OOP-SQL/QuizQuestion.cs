@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace QuizeSystem_OOP_SQL
 {
-    public class QuizQuestion
+    public class QuizQuestion : IViewable
     {
         public float QuestionScore { get; set; }
         public string Question { get; }
@@ -55,7 +55,7 @@ namespace QuizeSystem_OOP_SQL
             if (quiz.IsEqualInQuestionsScores) throw new Exception("Question Mark is automatically computed in equal scores Quizes!");
             if (string.IsNullOrEmpty(correctAnswer)) throw new Exception("Invalid Answer!");
             if (string.IsNullOrEmpty(question)) throw new Exception("Invalid question!");
-            if (questionScore>Quiz.TotalScore || questionScore <= 0) throw new Exception("Invalid Score!");
+            if (questionScore>Quiz.TotalScore || questionScore < 0) throw new Exception("Invalid Score!");
             Quiz = quiz;
             CorrectAnswer = correctAnswer;
             Question = question;
@@ -89,19 +89,24 @@ namespace QuizeSystem_OOP_SQL
             }
         }
 
-        //public int ChangeMultipleChoiceQuestionAnswer(int correctAnswerIndex)
-        //{
-        //    if (correctAnswerIndex >= 0 && correctAnswerIndex < 4 && Quiz.QuizType == QuizType.MultipleChoice)
-        //    {
-        //        this.CorrectAnswer = MultipleChoicesQuizeChoices[correctAnswerIndex];
-        //        return 0;
-        //    }
-        //    if (correctAnswerIndex < 0 || correctAnswerIndex >= 4)
-        //        throw new Exception("Incorrect index! choice index must be between 0 and 3");
-        //    if(Quiz.QuizType != QuizType.MultipleChoice)
-        //        throw new Exception("Not Multiple Choice Quize!");
-
-        //    return -1;
-        //}
+        public void ViewDetails()
+        {
+            Console.WriteLine($"Question : {Question}");
+            Console.WriteLine($"Correct Answer : {CorrectAnswer}");
+            Console.WriteLine($"Score : {QuestionScore}");
+            if (Quiz.QuizType == QuizType.MultipleChoice)
+            {
+                Console.WriteLine("Available Choices :");
+                for (int i = 0; i < 4; i++)
+                {
+                    var choice = MultipleChoicesQuizeChoices[i];
+                    if (choice != null)
+                    {
+                        Console.Write($"{i + 1}.{choice}  ");
+                    }
+                }
+                Console.WriteLine();
+            }
+        }
     }
 }

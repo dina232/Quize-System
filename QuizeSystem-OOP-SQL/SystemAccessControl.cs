@@ -70,7 +70,7 @@ namespace QuizeSystem_OOP_SQL
             {
                 Console.Write("Please select an option (student or teacher ): ");
                 var roleInput = Console.ReadLine();
-                if (Enum.TryParse(roleInput, true, out role))
+                if (Enum.TryParse<Role>(roleInput, true, out role))
                 {
                     Helpers.TakeRegestrationBasicInfo(out email, out password, out name);
                     if (role == Role.Student)
@@ -89,12 +89,12 @@ namespace QuizeSystem_OOP_SQL
                         {
                             Console.Write("Your Title (Professor, ProfessorAssistant or Instructor): ");
                             var titleString = Console.ReadLine();
-                            if (Enum.TryParse(titleString, true, out title))
+                            if (Enum.TryParse<TeacherTitle>(titleString, true, out title))
                             {
-                                Console.WriteLine("Invalid title. Please enter a valid title.");
-                                continue;
+                                break;
                             }
-                            break;
+                            Console.WriteLine("Invalid title. Please enter a valid title.");
+                            
                         }
                         Teacher teacher = new Teacher(name, email, password, title);
                         Data.Teachers.Add(teacher);

@@ -62,7 +62,10 @@ namespace QuizeSystem_OOP_SQL
                 {
                     break;
                 }
+                Console.ForegroundColor = ConsoleColor.Red;
                 Console.WriteLine("Invalid category! enter a valid one ");
+                Console.ForegroundColor = ConsoleColor.Gray;
+
             }
             while (true)
             {
@@ -73,14 +76,19 @@ namespace QuizeSystem_OOP_SQL
                 {
                     break;
                 }
+                Console.ForegroundColor = ConsoleColor.Red;
                 Console.WriteLine("Invalid number! Enter a valid one , total score must be between 1 and 100");
+                Console.ForegroundColor = ConsoleColor.Gray;
+
             }
             while (true)
             {
                 Console.Write("Quiz Duration with minutes :");
                 var quizDurationminutesString = Console.ReadLine();
                 if (int.TryParse(quizDurationminutesString, out quizDurationminutes) && quizDurationminutes > 0 && quizDurationminutes < 30) break;
+                Console.ForegroundColor = ConsoleColor.Red;
                 Console.WriteLine("Invalid Duration!");
+                Console.ForegroundColor = ConsoleColor.Gray;
 
             }
             while (true)
@@ -88,7 +96,9 @@ namespace QuizeSystem_OOP_SQL
                 Console.Write("Quiz Questions Number :");
                 var questionsNumberString = Console.ReadLine();
                 if (int.TryParse(questionsNumberString, out questionsNumber) && quizDurationminutes > 0 ) break;
+                Console.ForegroundColor = ConsoleColor.Red;
                 Console.WriteLine("Invalid Number!");
+                Console.ForegroundColor = ConsoleColor.Gray;
 
             }
             bool isEqualInScores = AreQuizQuestionsEqualInMarks();
@@ -101,9 +111,11 @@ namespace QuizeSystem_OOP_SQL
             bool areEqualInScore;
             while (true)
             {
+                Console.WriteLine();
+                Console.ForegroundColor = ConsoleColor.Red;
                 Console.WriteLine("Quiz Marks Distribution Type :");
                 Console.WriteLine("If the Questions are not equal in score , Editing Quiz Won't be Allowed!", ConsoleColor.Red);
-                Console.Write("Do you want the Quiz Questions to be Equal in Marks?[y/n] : ");
+                Console.Write("Do you want the Quiz Questions to be Equal in Marks [y/n]? : ");
                 var answer = Console.ReadLine();
                 if (answer.Equals("y", StringComparison.OrdinalIgnoreCase))
                 {
@@ -116,7 +128,9 @@ namespace QuizeSystem_OOP_SQL
                     break;
                 }
                 Console.WriteLine("Please Enter A valid answer!");
+
             }
+            Console.ForegroundColor = ConsoleColor.Gray;
             return areEqualInScore;
         }
     }

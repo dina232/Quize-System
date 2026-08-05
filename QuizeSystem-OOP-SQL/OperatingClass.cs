@@ -20,6 +20,8 @@ namespace QuizeSystem_OOP_SQL
 
         internal static Person Starting()
         {
+            Console.ForegroundColor = ConsoleColor.Cyan;
+            Console.WriteLine();
             Console.WriteLine("╔══════════════════════════════════════╗");
             Console.WriteLine("║        QUIZ MANAGEMENT SYSTEM        ║");
             Console.WriteLine("╚══════════════════════════════════════╝");
@@ -66,20 +68,24 @@ namespace QuizeSystem_OOP_SQL
         }
         public static void OperateSystem()
         {
-            Console.ForegroundColor = ConsoleColor.Cyan;
             Person person = Starting();
 
             while (true)
             {
+                Console.ForegroundColor = ConsoleColor.Gray;
                 ShowMenu(person);
-                Console.WriteLine("Do you want to continue? (y/n) ");
+                Console.ForegroundColor = ConsoleColor.Green;
+                Console.Write("Do you want to continue [y/n] ? ");
                 var answer = Console.ReadLine();
                 if (string.Equals(answer, "y", StringComparison.OrdinalIgnoreCase))
                     continue;
                 else if (string.Equals(answer, "n", StringComparison.OrdinalIgnoreCase))
                     return;
                 else
+                {
+                    Console.ForegroundColor = ConsoleColor.Red;
                     Console.WriteLine("Please enter a valid answer!");
+                }
             }
         }
     }

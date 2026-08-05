@@ -1,0 +1,12 @@
+╔══════════════════════════════════════╗
+║            QUIZES SYSTEM             ║
+╚══════════════════════════════════════╝
+
+1. Quiz with inequal scores functionalities need to be added to allow editing.
+2. Change Quiz type to question type ?
+3. Finishing course functionalities for teacher.
+4. ability to redistribute marks while receiving inequal scores quiz questions from teacher ? 
+	. if he entered total quiz score in first question . then remaining questions will be 0 scored!!!!
+
+5. Refactor code
+6. Design Colours well. 

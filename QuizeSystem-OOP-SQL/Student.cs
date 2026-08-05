@@ -193,7 +193,7 @@ namespace QuizeSystem_OOP_SQL
                     
                     if (quize.QuizType == QuizType.TrueOrFalse)
                     {
-                        chosen_answer = GetTrueFalseAnswer();
+                        chosen_answer = Helpers.GetTrueFalseAnswer();
                         student_choices.Add(chosen_answer);
                     }
                     else
@@ -225,20 +225,7 @@ namespace QuizeSystem_OOP_SQL
                 questionMarks += question.QuestionScore;
             }
         }
-        private string GetTrueFalseAnswer()
-        {
-            while (true)
-            {
-                Console.Write("Your Answer (true/false): ");
-                string answer = Console.ReadLine();
-
-                if (bool.TryParse(answer, out bool _))
-                {
-                    return answer;
-                }
-                Console.WriteLine("Invalid input. Please enter 'true' or 'false'.");
-            }
-        }
+        
 
         private void PrintQuizeResult(Quiz quize, QuizeStudentAnswersAndScores studentAnswersAndScore)
         {

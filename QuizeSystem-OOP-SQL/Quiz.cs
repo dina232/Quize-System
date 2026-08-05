@@ -79,23 +79,17 @@ namespace QuizeSystem_OOP_SQL
 
         public void ShowQuizQuestions()
         {
-            for (int j = 0; j < QuizQuestions.Count; j++)
+            int questionNumber = 1;
+            foreach (var question in QuizQuestions)
             {
-                Console.WriteLine($"Question {j + 1} : {QuizQuestions[j]}");
-                Console.WriteLine($"Correct answer : {QuizQuestions[j].CorrectAnswer}", ConsoleColor.Green);
-                if (QuizType == QuizType.MultipleChoice)
-                {
-                    Console.WriteLine("Available Choices");
-                    for (int i = 0; i < 4; i++)
-                    {
-                        var choice = QuizQuestions[j].MultipleChoicesQuizeChoices[i];
-                        if (choice != null)
-                        {
-                            Console.Write($"{i + 1}.{choice}  ");
-                        }
-                    }
-                }
+                Console.WriteLine($"Question {questionNumber} ");
+                question.ViewDetails();
+                Console.WriteLine();
+                Console.WriteLine("──────────────────────────────────────");
+                Console.WriteLine();
+                questionNumber++;
             }
+            
         }
 
         public void AddQuestion(string questionText, string[] options, int correctOptionIndex,float score)
